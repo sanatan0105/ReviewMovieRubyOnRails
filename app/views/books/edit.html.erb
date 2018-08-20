@@ -1,0 +1,10 @@
+<h2>Edit book</h2>
+
+<%= simple_form_for  @book, :html=> {multipart: true} do |f| %>
+  <%= f.select :category_id, @category %>
+  <%= f.file_field :book_img %>
+  <%= f.input :title, label: "Title" %>
+  <%= f.input :description %>
+  <%= f.input :author  %>
+  <%= f.button :submit , class: "btn btn-default"%>
+<% end %>

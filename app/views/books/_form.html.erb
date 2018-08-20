@@ -1,0 +1,8 @@
+<%= simple_form_for @book do |f| %>
+  <%= select_tag(:category_id, options_for_select(@category), :prompt => "Select an Category") %>
+  <%= f.file_field :book_img %>
+  <%= f.input :title, label: "Title" %>
+  <%= f.input :description %>
+  <%= f.input :author  %>
+  <%= f.button :submit , class: "btn btn-default"%>
+<% end %>
